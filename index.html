@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QRgen</title>
+    <link rel="icon" href="./src/public/favicon.ico"/>
+    <link rel="stylesheet" href="./src/css/index.css" />
+  </head>
+
+  <body>
+    <img class="logo" src="./src/public/favicon.ico" alt="logo"/>
+    <main>
+      <section class="container">
+        <div class="tabs">
+          <button id="btn-criar" onclick="tabCriar()" class="tab tab--active">
+            Criar
+          </button>
+
+          <button id="btn-ler" onclick="tabLer()" class="tab">Ler</button>
+        </div>
+
+        <div class="form">
+          <div class="field">
+            <label id="infoForm" class="label" for="inputForm">
+              Insira seu Link
+            </label>
+
+            <input
+              class="input"
+              id="inputForm"
+              type="text"
+              placeholder="https://www.google.com.br"
+            />
+
+            <button id="btnForm" class="button">Gerar</button>
+          </div>
+        </div>
+
+        <div id="result" class="result">
+          <img id="qrImage" class="image" src="" alt="QR Code" />
+
+          <p id="qrText" class="text"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
